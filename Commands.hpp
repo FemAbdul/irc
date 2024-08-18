@@ -6,7 +6,7 @@
 /*   By: fabdul-k <fabdul-k@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/15 18:57:49 by fabdul-k          #+#    #+#             */
-/*   Updated: 2024/08/17 07:35:23 by fabdul-k         ###   ########.fr       */
+/*   Updated: 2024/08/18 10:08:29 by fabdul-k         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 #define COMMANDS_HPP
 #include <iostream>
 #include <sstream>
+#include <vector>
+#include <map>
+#include <algorithm>
 
 class User;
 class Server;
@@ -34,8 +37,8 @@ class Commands
     Commands(std::string message, int fd, std::string nickname, std::string username);
     ~Commands();
 
-    
-
+    int ExecuteCommand(Server &server);
+    void execQuitcmd(Server &server);
 
 };
 
