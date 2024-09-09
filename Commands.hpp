@@ -6,12 +6,13 @@
 /*   By: fabdul-k <fabdul-k@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/15 18:57:49 by fabdul-k          #+#    #+#             */
-/*   Updated: 2024/08/18 10:08:29 by fabdul-k         ###   ########.fr       */
+/*   Updated: 2024/08/20 07:38:01 by fabdul-k         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef COMMANDS_HPP
 #define COMMANDS_HPP
+#include "Libs.hpp"
 #include <iostream>
 #include <sstream>
 #include <vector>
@@ -39,7 +40,7 @@ class Commands
 
     int ExecuteCommand(Server &server);
     void execQuitcmd(Server &server);
-
+    void execPrivmsgcmd(Server &server);
 };
 
 #endif
